@@ -1,0 +1,433 @@
+@font-face {
+    font-family: delirium;
+    src: url(./DELIRIUM\ NCV.ttf);
+}
+
+@font-face {
+    font-family: gilroyl;
+    src: url(./Radomir\ Tinkov\ -\ Gilroy-Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    position: relative;
+}
+
+#top {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+#top #nav1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 8vh 4vw 0 4vw;
+}
+
+#nav1 .n1left {
+
+    font-family: delirium;
+}
+
+.n1left h1 {
+    font-weight: 100;
+    font-size: 2vw;
+    margin-bottom: 2vh;
+}
+
+.n1left p {
+    font-weight: 100;
+    font-size: 1vw;
+    letter-spacing: .2vw;
+}
+
+#top #nav1 h2 {
+    font-family: gilroy;
+    font-weight: 100;
+    display: inline;
+    font-size: 18px;
+}
+
+#nav1 .n1right i {
+    margin-left: 35px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: black;
+    font-family: gilroy;
+    font-weight: 100;
+}
+
+#top #nav2 {
+    position: relative;
+    top: 60vh;
+    padding: 0 4vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-family: delirium;
+}
+
+.n2left h1 {
+    line-height: 1;
+    font-size: 5vw;
+    letter-spacing: 1vw;
+    font-weight: 100;
+}
+
+.n2left p {
+    font-family: gilroy;
+    opacity: .5;
+    font-size: 12px;
+}
+
+.n2right h2 {
+    font-size: 1.5vw;
+    letter-spacing: .2vw;
+    font-weight: 100;
+    display: inline;
+}
+
+.n2right i {
+    color: #fff;
+    padding: .5vw;
+    margin-left: 35px;
+    border-radius: 50%;
+    background-color: #B1CFC9;
+    font-size: 12px;
+}
+
+#top .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    background-color: #B1CFC9;
+
+}
+
+#top img {
+    position: absolute;
+    height: 75vh;
+    left: 50%;
+    top: 62%;
+    filter: drop-shadow(9px 0px 13px rgb(90, 90, 93));
+    transform: translate(-50%, -50%);
+}
+
+#second {
+    min-height: 100vh;
+    width: 100%;
+}
+
+#second .s1det {
+    padding: 3vw 4vw;
+}
+
+.s1det h1 {
+    font-size: 6vw;
+    font-family: delirium;
+    font-weight: 500;
+
+}
+
+.s1det p {
+    font-size: 1vw;
+    font-family: gilroy;
+    width: 40vw;
+    opacity: .5;
+
+}
+
+#second #slider {
+    height: 55vh;
+    padding: 0 4vw;
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 100px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#slider::-webkit-scrollbar {
+    display: none;
+}
+
+#slider .slides {
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    position: relative;
+    flex-shrink: 0;
+    height: inherit;
+    width: 35vw;
+    transform: skew(0deg);
+}
+
+.slides img {
+    object-fit: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+.slides img:nth-child(1) {
+    filter: grayscale();
+}
+
+.slides img:nth-child(2) {
+    clip-path: circle(0% at 100px 100px);
+    /* transform-origin: center; */
+}
+
+#third {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+#left-dets {
+    width: 50%;
+    height: 100vh;
+    padding: 25vh 0 0 4vw;
+}
+
+#left-dets h1 {
+    font-family: sans-serif;
+    opacity: .9;
+    font-size: 6vw;
+    font-weight: 500;
+    margin: 15vh 0;
+}
+
+#left-dets p {
+    margin: 5vh 0;
+
+    font-family: gilroy;
+    opacity: .8;
+    font-size: 12px;
+    width: 30vw;
+}
+
+#right-image {
+    position: relative;
+    right: -10%;
+    width: 30%;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    background-image: url(./images/timage.jpg);
+}
+
+#right-image::after {
+    content: "06";
+    position: absolute;
+    top: 78%;
+    opacity: .6;
+    font-family: delirium;
+    left: -11%;
+    font-size: 12vw;
+}
+
+#footer {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer #f-left {
+    height: 100vh;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-family: gilroyl;
+}
+
+#footer #f-left h1 {
+    font-size: 4vw;
+}
+
+#footer #f-left p {
+    font-size: 15px;
+    opacity: .8;
+    margin: 2.5vh;
+}
+
+#footer #f-left #one {
+    font-family: gilroy;
+    color: black;
+    opacity: 1;
+}
+
+#footer #f-right {
+    height: 100vh;
+    width: 40%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(./images/fimage.jpg);
+}
+
+@media(max-width:500px) {
+    #main {
+        overflow-x: hidden;
+    }
+
+    #top #nav1 {
+        padding: 4vh 4vw 0 4vw;
+    }
+
+    .n1left h1 {
+        font-size: 10vw;
+        letter-spacing: 3px;
+    }
+
+    .n1left p {
+        font-size: 4vw;
+        letter-spacing: .5vw;
+    }
+
+    #top #nav1 h2 {
+        font-size: 15px;
+    }
+
+    #nav1 .n1right i {
+        margin-left: 15px;
+        font-size: 10px;
+        padding: 1;
+    }
+
+    #top #nav2 {
+        z-index: 99;
+    }
+
+    .n2left h1 {
+        font-size: 15vw;
+    }
+
+    .n2left p {
+        opacity: .9;
+        font-size: 10px;
+    }
+
+    .n2right h2 {
+        letter-spacing: 1vw;
+        margin-top: 10px;
+        font-size: 6vw;
+    }
+
+    .n2right i {
+        padding: 2vw;
+        margin-left: 15px;
+    }
+
+    #top .circle {
+        height: 75vw;
+        width: 75vw;
+
+    }
+
+    #second {
+        min-height: 60vh;
+        width: 100%;
+        padding: 5vh 0;
+    }
+
+    #second .s1det {
+        padding: 10vh 4vw;
+    }
+
+    .s1det h1 {
+        font-size: 16vw;
+    }
+
+    .s1det p {
+        font-size: 3vw;
+        width: 60vw;
+    }
+
+    #second #slider {
+        height: 35vh;
+        gap: 50px;
+    }
+
+    #slider .slides {
+        width: 60vw;
+    }
+
+    #third {
+        min-height: 50vh;
+    }
+
+    #left-dets {
+        width: 60%;
+        height: 50vh;
+        padding: 15vh 0 0 4vw;
+    }
+
+    #left-dets h1 {
+        font-size: 10vw;
+        margin: 2vh 0;
+    }
+
+    #left-dets p {
+        margin: 2vh 0;
+        width: 60vw;
+    }
+
+    #right-image {
+        height: 30vh;
+    }
+
+    #right-image::after {
+        top: 82%;
+        left: -18%;
+        font-size: 20vw;
+    }
+
+    #footer {
+        min-height: 100vh;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #footer #f-left {
+        height: 50vh;
+        width: 100%;
+        padding-left: 10vw;
+        justify-content: flex-start;
+    }
+
+    #footer #f-left h1 {
+        font-size: 8vw;
+    }
+
+
+    #footer #f-right {
+        height: 50vh;
+        width: 100%;
+    }
+
+}
